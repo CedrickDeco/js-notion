@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@font-face {
+  font-family: "Quintessential";
+  src: url(../fonts/Quintessential/Quintessential-Regular.ttf);
+}
+@font-face {
+  font-family: "Tapestry";
+  src: url(../fonts/Tapestry/Tapestry-Regular.ttf);
+}
+@font-face {
+  font-family: "Sofia";
+  src: url(../fonts/Sofia/Sofia-Regular.ttf);
+}
+@font-face {
+  font-family: "font-1";
+  src: url(./font/Inter-VariableFont_slntwght.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: rgb(235, 244, 242);
+}
+
+body form {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 6px 20px;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.054);
+}
+
+body form input {
+  border: 1px solid rgb(235, 244, 242);
+  background: rgb(235, 244, 242);
+  color: #16d9e7;
+  outline: none;
+  border-radius: 5px;
+  height: 30px;
+  margin: 10px 0 5px;
+  width: 270px;
+  font-size: 1.2rem;
+  transition: 0.2s;
+}
+
+body form input:focus {
+  border: 1px solid #16d9e7;
+}
+
+body #result {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 110px;
+}
+
+body #result li {
+  flex: 1 0 25%;
+  min-width: 280px;
+  /* border: 1px solid #16d9e7; */
+  background: white;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.084);
+}
+
+body #result li p {
+  color: #36ca79;
+}
+
+body #result li img {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.304);
+}
+
+.navbar {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar .logo img {
+  height: 30px;
+  width: 100px;
+}
+
+.navbar .menu .items {
+  display: flex;
+  justify-content: end;
+  padding-top: 7px;
+  transition: 8s ease-out;
+}
+
+.navbar .menu .items li {
+  margin-right: 10px;
+  list-style: none;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.navbar .menu .items li:hover {
+  color: #3783F5;
+}
+
+.navbar .menu .items li:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.navbar .menu .items li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0px;
+  background: #33EAB9;
+  height: 3px;
+  transition-property: left, right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.navbar .toggle-btn {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .menu .items {
+    display: none;
+    justify-content: flex-start;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar .menu .items li {
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar .toggle-btn {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    right: 20px;
+  }
+  .navbar .toggle-btn span {
+    width: 30px;
+    height: 5px;
+    margin-top: 2px;
+    background: #3783F5;
+    border-radius: 10px;
+  }
+  .navbar.active {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar.active .menu {
+    transition: 0.3s;
+  }
+  .navbar.active .menu .items {
+    display: block;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .navbar.active .menu .items li {
+    transition: 0.3s ease-out;
+  }
+  .navbar.active .toggle-btn {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    right: 20px;
+  }
+  .navbar.active .toggle-btn span {
+    width: 20px;
+    height: 5px;
+    margin-top: 2px;
+    background: #3783F5;
+    border-radius: 10px;
+  }
+  .active span {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+  }
+  .active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .active span:nth-child(2) {
+    opacity: 0;
+  }
+  .active span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
+.content {
+  color: #09fbba;
+  transition: 1s;
+  background-color: #383838;
+  z-index: 1;
+}
+
+.content h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.content p {
+  padding: 10px 50px;
+}
+
+/*# sourceMappingURL=index.css.map */
+
+/*# sourceMappingURL=index.scss.map */

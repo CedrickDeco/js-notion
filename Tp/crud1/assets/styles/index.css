@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@font-face {
+  font-family: "Quintessential";
+  src: url(../fonts/Quintessential/Quintessential-Regular.ttf);
+}
+@font-face {
+  font-family: "Tapestry";
+  src: url(../fonts/Tapestry/Tapestry-Regular.ttf);
+}
+@font-face {
+  font-family: "Sofia";
+  src: url(../fonts/Sofia/Sofia-Regular.ttf);
+}
+@font-face {
+  font-family: "font-1";
+  src: url(./font/Inter-VariableFont_slntwght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .logo img {
+  height: 30px;
+  width: 100px;
+}
+.navbar .menu .items {
+  display: flex;
+  justify-content: end;
+  padding-top: 7px;
+}
+.navbar .menu .items li {
+  margin-right: 10px;
+  list-style: none;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  position: relative;
+}
+.navbar .menu .items li:hover {
+  color: #4479E3;
+}
+.navbar .menu .items li:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.navbar .menu .items li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0px;
+  background: #33EAB9;
+  height: 3px;
+  transition-property: left, right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.navbar .menu .items .connectBtn {
+  padding: 0 2px;
+  margin-top: -3px;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  transition: border-color 0.3s;
+}
+.navbar .menu .items .connectBtn:hover {
+  border: #33EAB9 1px solid;
+  margin-top: -3px;
+}
+.navbar .toggle-btn {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .menu .items {
+    display: none;
+    justify-content: flex-start;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar .menu .items li {
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar .toggle-btn {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    right: 20px;
+  }
+  .navbar .toggle-btn span {
+    width: 30px;
+    height: 5px;
+    margin-top: 2px;
+    background: #4479E3;
+    border-radius: 10px;
+  }
+  .navbar.active {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar.active .menu {
+    transition: 0.3s;
+  }
+  .navbar.active .menu .items {
+    display: block;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .navbar.active .menu .items li {
+    transition: 0.3s ease-out;
+  }
+  .navbar.active .toggle-btn {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    right: 20px;
+  }
+  .navbar.active .toggle-btn span {
+    width: 20px;
+    height: 5px;
+    margin-top: 2px;
+    background: #4479E3;
+    border-radius: 10px;
+  }
+  .active span {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+  }
+  .active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .active span:nth-child(2) {
+    opacity: 0;
+  }
+  .active span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
+section {
+  width: 100vw;
+  height: 93vh;
+  background: #E5E5E5;
+  position: relative;
+}
+section .container {
+  background: #fff;
+  width: 90%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+section .container .title-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 25px;
+}
+section .container .title-container .title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-top: 15px;
+}
+section .container .title-container .createBtn {
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  background: #4479E3;
+  color: #fff;
+  border-radius: 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.1s;
+}
+section .container .title-container .createBtn:hover {
+  transform: scale(1.04);
+}
+section .container .table-container table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 95%;
+  text-align: center;
+}
+section .container .table-container table thead tr {
+  background: #F5F5F5;
+}
+section .container .table-container table thead tr th {
+  padding: 5px 10px;
+  text-align: left;
+  font-weight: bold;
+}
+section .container .table-container table thead tr th:nth-child(4) {
+  text-align: center;
+  width: 25px;
+}
+section .container .table-container table thead tr th:last-child {
+  text-align: center;
+  width: 25px;
+}
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  visibility: hidden;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.modal-container .modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  width: 40%;
+  transform: translate(60%, 50%);
+}
+.modal-container .modal form {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  padding: 30px 20px;
+  position: relative;
+}
+.modal-container .modal form input {
+  border: none;
+  border-bottom: 2px solid;
+  margin: 10px 0;
+  outline: none;
+}
+.modal-container .modal form label {
+  font-size: 1rem;
+}
+.modal-container .modal form label .validation-error {
+  color: red;
+  margin-left: 5px;
+}
+.modal-container .modal form label.hide {
+  display: none;
+}
+.modal-container .modal form .addBtn {
+  padding: 10px;
+  background: #4479E3;
+  color: #fff;
+  width: 90px;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  margin: 10px 0;
+}
+
+.modal-container.active {
+  visibility: visible;
+}
+
+/*# sourceMappingURL=index.css.map */

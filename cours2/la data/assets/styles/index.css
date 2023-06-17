@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@font-face {
+  font-family: "Quintessential";
+  src: url(../fonts/Quintessential/Quintessential-Regular.ttf);
+}
+@font-face {
+  font-family: "Tapestry";
+  src: url(../fonts/Tapestry/Tapestry-Regular.ttf);
+}
+@font-face {
+  font-family: "Sofia";
+  src: url(../fonts/Sofia/Sofia-Regular.ttf);
+}
+@font-face {
+  font-family: "font-1";
+  src: url(./font/Inter-VariableFont_slntwght.ttf);
+}
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.user-card {
+  border: 2px solid orange;
+  margin: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */

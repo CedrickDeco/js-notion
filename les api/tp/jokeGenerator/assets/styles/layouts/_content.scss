@@ -1,0 +1,15 @@
+.content {
+    color: #09fbba;
+    transition: 1s;
+    background-color: #383838;
+    z-index: 1;
+    h1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 4rem;
+        //margin-top: 20px;
+    }
+    p {
+        padding: 10px 50px;
+    }
+}

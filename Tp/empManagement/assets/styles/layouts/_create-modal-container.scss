@@ -1,0 +1,210 @@
+.create-modal-container {
+    width: 100%;
+    height: 100vh;
+    background: $modalContainerBg;
+    position: absolute;
+    top: 0;
+    overflow: auto;
+    margin: 0 auto;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+    z-index: -1;
+    .create-modal {
+        width: 0%;
+        top: -50%;
+        left: -50%;
+        transform: translate(50%, 50%);
+        background: $white;
+        border-radius: 10px;
+        transition: 0.5s ease-in-out;
+        .hr1 {
+            background: $dark-bleu;
+            height: 8px;
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .hr2 {
+            background: $simple-bleu;
+            height: 7px;
+            width: 100%;
+            margin-top: -1px;
+        }
+        .close-btn {
+            height: 25px;
+            width: 25px;
+            background: $pink-color;
+            border-radius: 50%;
+            margin-left: 98%;
+            margin-top: -25px;
+            cursor: pointer;
+            position: relative;
+            i {
+                position: absolute;
+                top: 20%;
+                left: 30%;
+                color: $white;
+            }
+        }
+        .form-container {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            background: $grey;
+            .left-part {
+                border-right: 4px solid $simple-bleu;
+                .image-container {
+                    display: grid;
+                    grid-template-columns: 70% 40%;
+                    margin-top: 10px;
+                    @media screen and (max-width: 800px) {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .image {
+                        img {
+                            height: 90%;
+                            width: 90%;
+                            margin-left: 10%;
+                            border-radius: 10px;
+                            @media screen and (max-width: 800px) {
+                                margin-left: 20%;
+                                height: 60%;
+                                width: 60%;
+                            }
+                        }
+                    }
+                    .icone {
+                        i {
+                            margin-left: 10%;
+                            margin-top: 80%;
+                            color: $simple-bleu;
+                            position: relative;
+                            cursor: pointer;
+                            font-size: 1.5rem;
+                            @media screen and (max-width: 800px) {
+                                margin-left: 45%;
+                                margin-top: 10%;
+                            }
+                        }
+                        input {
+                            position: absolute;
+                            border-radius: 50px;
+                            width: 25px;
+                            height: 40px;
+                            opacity: 0;
+                            cursor: pointer;
+                            @media screen and (min-width: 900px) {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+                            @media screen and (min-width: 801px) and (max-width: 899px) {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+                            @media screen and (min-width: 650px) and (max-width: 800px) {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .right-part {
+                form {
+                    margin: 10px 15px;
+                    .container {
+                        display: block;
+                        .first {
+                            display: grid;
+                            grid-template-columns: 30% 70%;
+                            margin-bottom: 20px;
+                            @media screen and (max-width: 800px) {
+                                display: flex;
+                                flex-direction: column;
+                            }
+                            .left {
+                                label {
+                                    color: $black;
+                                    font-size: 1.05rem;
+                                    text-transform: capitalize;
+                                    font-weight: bold;
+                                    font-family: $menu
+                                }
+                            }
+                            .right {
+                                input {
+                                    width: 93%;
+                                    border: none;
+                                    border-bottom: 1px solid $line-color;
+                                    outline: none;
+                                    background: transparent;
+                                }
+                            }
+                        }
+                        .second {
+                            .errEmail {
+                                display: none;
+                            }
+                        }
+                    }
+                    .boutons {
+                        display: grid;
+                        grid-template-columns: 50% 50%;
+                        @media screen and (max-width: 800px) {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .addBtn {
+                            justify-self: center;
+                            padding: 10px;
+                            background: $simple-bleu;
+                            border: none;
+                            color: $white;
+                            text-transform: capitalize;
+                            font-size: 1rem;
+                            border-radius: 5px;
+                            font-family: $inter;
+                            cursor: pointer;
+                            transition: 0.3s;
+                            &:disabled {
+                                background: $grey-btn;
+                            }
+                            &:hover {
+                                transform: scale(1.02);
+                            }
+                            &:first-child {
+                                background: $simple-bleu;
+                                @media screen and (max-width: 800px) {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                            &:first-child:disabled {
+                                background: $grey-btn;
+                                @media screen and (max-width: 800px) {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                            &:last-child {
+                                background: $simple-bleu;
+                            }
+                            &:last-child:disabled {
+                                background: $grey-btn;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.create-modal-container.active {
+    opacity: 1;
+    z-index: 1;
+    .create-modal {
+        width: 50%;
+    }
+}

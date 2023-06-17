@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "Quintessential";
+    src: url(../fonts/Quintessential/Quintessential-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Tapestry";
+    src: url(../fonts/Tapestry/Tapestry-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Sofia";
+    src: url(../fonts/Sofia/Sofia-Regular.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$menu: "roboto",
+sans-serif,
+cursive;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+$kanit: "Kanit",
+sans-serif,
+cursive;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+$inter: "Inter",
+sans-serif,
+cursive;
+@font-face {
+    font-family: "font-1";
+    src: url(./font/Inter-VariableFont_slnt\wght.ttf);
+}
+
+$nav-item-color: #3783F5;
+$nav-item-underline-color: #33EAB9;
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+//body {}
+body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 90%;
+    .card {
+        flex: 1 0 30%;
+        margin: 10px;
+        padding: 20px 20px 0;
+        text-align: center;
+        border-radius: 8px;
+        width: 350px;
+        background: #fff2e1;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        box-shadow: 0 1px 6px rgba(51, 51, 51, 0.192);
+        position: relative;
+        min-height: 260px;
+        display: grid;
+        overflow: hidden;
+        &::before {
+            content: "";
+            height: 76px;
+            width: 100%;
+            position: absolute;
+            background: url(https://picsum.photos/600/100) center/cover;
+            filter: opacity(0.7) grayscale(80%);
+        }
+        img {
+            border-radius: 150px;
+            margin: 4px auto 0;
+            height: 100px;
+            display: block;
+            box-shadow: 0 2px 6px rgba(51, 51, 51, 0.652);
+            z-index: 2;
+        }
+        h3 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+        }
+        em,
+        p {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+// .active~.content {
+//     opacity: 0.3;
+// }

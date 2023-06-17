@@ -1,0 +1,63 @@
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $bg-color2;
+    visibility: hidden;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    .modal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        width: 40%;
+        transform: translate(60%, 50%);
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+            padding: 30px 20px;
+            position: relative;
+            input {
+                border: none;
+                border-bottom: 2px solid;
+                margin: 10px 0;
+                outline: none;
+            }
+            label {
+                font-size: 1rem;
+                .validation-error {
+                    color: red;
+                    margin-left: 5px;
+                }
+                &.hide {
+                    display: none;
+                }
+            }
+            .addBtn {
+                padding: 10px;
+                background: $nav-item-color;
+                color: $white;
+                width: 90px;
+                border: none;
+                border-radius: 50px;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translate(-50%, 50%);
+                margin: 10px 0;
+            }
+        }
+    }
+}
+
+.modal-container.active {
+    visibility: visible;
+}

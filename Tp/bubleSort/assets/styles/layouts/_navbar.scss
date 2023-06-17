@@ -1,0 +1,128 @@
+.navbar {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        img {
+            height: 30px;
+            width: 100px;
+        }
+    }
+    .menu {
+        .items {
+            display: flex;
+            justify-content: end;
+            padding-top: 7px;
+            transition: 8s ease-out;
+            li {
+                margin-right: 10px;
+                list-style: none;
+                text-transform: capitalize;
+                font-size: 1.2rem;
+                position: relative;
+                &:hover {
+                    color: $nav-item-color;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                    }
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    right: 50%;
+                    bottom: 0px;
+                    background: $nav-item-underline-color;
+                    height: 3px;
+                    transition-property: left, right;
+                    transition-duration: 0.3s;
+                    transition-timing-function: ease-out;
+                }
+            }
+        }
+    }
+    .toggle-btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        .menu {
+            .items {
+                display: none;
+                justify-content: flex-start;
+                width: 100%;
+                transition: all .5s ease-in-out;
+                li {
+                    transition: all .5s ease-in-out;
+                }
+            }
+        }
+        .toggle-btn {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            top: 10px;
+            right: 20px;
+            span {
+                width: 30px;
+                height: 5px;
+                margin-top: 2px;
+                background: $nav-item-color;
+                border-radius: 10px;
+            }
+        }
+    }
+    .navbar.active {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        .menu {
+            transition: 0.3s;
+            .items {
+                display: block;
+                justify-content: flex-start;
+                width: 100%;
+                li {
+                    transition: 0.3s ease-out;
+                }
+            }
+        }
+        .toggle-btn {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            top: 10px;
+            right: 20px;
+            span {
+                width: 20px;
+                height: 5px;
+                margin-top: 2px;
+                background: $nav-item-color;
+                border-radius: 10px;
+            }
+        }
+    }
+    .active span {
+        position: absolute;
+        top: 10px;
+        right: 0px;
+    }
+    .active span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    .active span:nth-child(2) {
+        opacity: 0;
+    }
+    .active span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+}

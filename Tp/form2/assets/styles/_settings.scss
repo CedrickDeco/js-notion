@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "Quintessential";
+    src: url(../fonts/Quintessential/Quintessential-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Tapestry";
+    src: url(../fonts/Tapestry/Tapestry-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Sofia";
+    src: url(../fonts/Sofia/Sofia-Regular.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$menu: "roboto",
+sans-serif,
+cursive;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+$kanit: "Kanit",
+sans-serif,
+cursive;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+$inter: "Inter",
+sans-serif,
+cursive;
+@font-face {
+    font-family: "font-1";
+    src: url(./font/Inter-VariableFont_slnt\wght.ttf);
+}
+
+$nav-item-color: #3783F5;
+$white: #fff;
+$nav-item-underline-color: #33EAB9;
+$box-shadow-color: #d3f7ff71;
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {}
+
+// .active~.content {
+//     opacity: 0.3;
+// }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Icone de l'onglet-->
+    <link rel="shortcut icon" href="./assets/img/logo js.png">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="./assets/styles/index.css">
+</head>
+
+<body>
+    <div class="navbar" id="nav">
+        <div class="logo">
+            <img src="./assets/img/logoDeco-transparent.png" alt="">
+        </div>
+        <div class="menu">
+            <ul class="items">
+                <li>accueil</li>
+                <li>services</li>
+                <li>mission</li>
+                <li>contacts</li>
+                <button class="connectBtn" id="displayForm">se connecter</button>
+            </ul>
+        </div>
+        <div class="toggle-btn" id="btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="title-container">
+                <div class="title">Inscription des employés</div>
+                <button class="createBtn" id="create-btn">ajouter</button>
+            </div>
+            <div class="table-container">
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>nom</th>
+                            <th>fonction</th>
+                            <th>salaire</th>
+                            <th>editer</th>
+                            <th>supprimer</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <div class="modal-container">
+        <div class="modal">
+            <form>
+                <label for="name">Nom</label>
+                <label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                <input type="text" id="name" name="theName" required>
+                <label for="function">Fonction</label>
+                <input type="text" id="function" name="theFunction" required>
+                <label for="salary">Salaire</label>
+                <input type="text" id="salary" name="theSalary" required>
+                <input type="submit" class="addBtn" value="Ajouter">
+                <!-- <button class="addBtn">Ajouter</button> -->
+            </form>
+        </div>
+    </div>
+    <script src="./assets/styles/js/index.js" async defer></script>
+</body>
+
+</html>

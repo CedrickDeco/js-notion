@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@font-face {
+  font-family: "Quintessential";
+  src: url(../fonts/Quintessential/Quintessential-Regular.ttf);
+}
+@font-face {
+  font-family: "Tapestry";
+  src: url(../fonts/Tapestry/Tapestry-Regular.ttf);
+}
+@font-face {
+  font-family: "Sofia";
+  src: url(../fonts/Sofia/Sofia-Regular.ttf);
+}
+@font-face {
+  font-family: "font-1";
+  src: url(./font/Inter-VariableFont_slntwght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #383838;
+}
+
+.content {
+  color: #09fbba;
+  transition: 1s;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 20px;
+}
+
+p {
+  padding: 30px 50px;
+}
+
+#side-bar {
+  position: absolute;
+  width: 230px;
+  height: 100%;
+  background: #09fbba;
+  top: 0;
+  left: -230px;
+  transition: 0.5s ease-out;
+  z-index: 4;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 30px;
+  left: 240px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+.toggle-btn span {
+  width: 60px;
+  height: 10px;
+  border-radius: 5px;
+  background: #09fbba;
+  display: block;
+  margin-top: 4px;
+  transition: 0.3s ease;
+}
+
+#side-bar.active {
+  left: 0;
+}
+
+.active span {
+  position: absolute;
+}
+
+.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+li {
+  color: #292929;
+  list-style: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+li:hover {
+  background: #292929;
+  color: #fcfcfb;
+}
+
+.active ~ .content {
+  opacity: 0.3;
+}
+
+/*# sourceMappingURL=index.css.map */

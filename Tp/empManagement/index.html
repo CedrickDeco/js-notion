@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Icone de l'onglet-->
+    <link rel="shortcut icon" href="./assets/img/icone-google.png">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css"></link>
+    <link rel="stylesheet" href="./assets/styles/index.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="title">Gestion des Employés</div>
+    </div>
+    <div class="entete">
+        <div class="left">
+            <button class="btn" id="create-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    ajouter employé
+                </button>
+            <button class="btn" id="clear-btn">
+                    <i class="fa-solid fa-eraser"></i>
+                    clear filtering
+                </button>
+        </div>
+        <div class="right">
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input type="text" placeholder="Entrez l'id ici" id="empId">
+            <button class="btn">recherche</button>
+        </div>
+    </div>
+    <div class="table-container">
+        <table class="list">
+            <thead>
+                <tr>
+                    <th>n°</th>
+                    <th>photo</th>
+                    <th>id</th>
+                    <th>nom</th>
+                    <th>prenom</th>
+                    <th>email</th>
+                    <th>code</th>
+                    <th>profession</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <tbody id="table-data"></tbody>
+        </table>
+    </div>
+    <div class="create-modal-container" id="create-modal-container">
+        <div class="create-modal">
+            <div class="hr1"></div>
+            <div class="hr2"></div>
+            <div class="close-btn" id="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="form-container">
+                <div class="left-part">
+                    <div class="image-container">
+                        <div class="image">
+                            <img src="./assets/img/avatar2.png" alt="" id="profile-pic">
+                        </div>
+                        <div class="icone">
+                            <i class="fa-solid fa-plus">
+                                    <input type="file" id="upload-field">
+                                </i>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-part">
+                    <form id="register-form">
+                        <div class="container">
+                            <div class="first">
+                                <div class="left">
+                                    <label for="id">Id</label>
+                                </div>
+                                <div class="right">
+                                    <input type="number" autocomplete="off" id="id">
+                                </div>
+                            </div>
+                            <div class="second">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="first">
+                                <div class="left">
+                                    <label for="name">Nom</label>
+                                </div>
+                                <div class="right">
+                                    <input type="text" autocomplete="off" id="name">
+                                </div>
+                            </div>
+                            <div class="second">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="first">
+                                <div class="left">
+                                    <label for="last-name">Prénom</label>
+                                </div>
+                                <div class="right">
+                                    <input type="text" autocomplete="off" id="last-name">
+                                </div>
+                            </div>
+                            <div class="second">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="first">
+                                <div class="left">
+                                    <label for="email">Email</label>
+                                </div>
+                                <div class="right">
+                                    <input type="text" autocomplete="off" id="email">
+                                </div>
+                            </div>
+                            <div class="second">
+                                <span class="errEmail">Email incorrect</span>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="first">
+                                <div class="left">
+                                    <label for="office-code">Code</label>
+                                </div>
+                                <div class="right">
+                                    <input type="number" autocomplete="off" id="office-code">
+                                </div>
+                            </div>
+                            <div class="second">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="first">
+                                <div class="left">
+                                    <label for="job-title">Fonction</label>
+                                </div>
+                                <div class="right">
+                                    <input type="text" autocomplete="off" id="job-title">
+                                </div>
+                            </div>
+                            <div class="second">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="boutons">
+                            <input type="submit" class="addBtn" id="register-btn" value="Enregistrer">
+                            <input type="submit" class="addBtn" disabled="disabled" id="update-btn" value="modifier">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./assets/styles/js/index.js" async defer></script>
+</body>
+
+</html>

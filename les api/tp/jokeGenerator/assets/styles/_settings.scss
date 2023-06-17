@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "Quintessential";
+    src: url(../fonts/Quintessential/Quintessential-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Tapestry";
+    src: url(../fonts/Tapestry/Tapestry-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Sofia";
+    src: url(../fonts/Sofia/Sofia-Regular.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$menu: "roboto",
+sans-serif,
+cursive;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+$kanit: "Kanit",
+sans-serif,
+cursive;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+$inter: "Inter",
+sans-serif,
+cursive;
+@font-face {
+    font-family: "font-1";
+    src: url(./font/Inter-VariableFont_slnt\wght.ttf);
+}
+
+$nav-item-color: #3783F5;
+$nav-item-underline-color: #33EAB9;
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+//body {}
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 1.6rem;
+    background: #d6e1f0;
+    color: rgb(241, 241, 241);
+    .app {
+        width: 70%;
+        min-width: 400px;
+        max-width: 800px;
+        background: rgb(145, 115, 246);
+        border-radius: 14px;
+        padding: 20px 40px;
+        box-shadow: 0 2px 18px rgba(0, 0, 0, 0.307);
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+            transform: scale(1.01);
+        }
+    }
+}
+
+// .active~.content {
+//     opacity: 0.3;
+// }

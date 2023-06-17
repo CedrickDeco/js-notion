@@ -1,0 +1,75 @@
+* {
+    border-radius: 20px;
+    padding: 8px;
+    text-align: center;
+}
+
+body {
+    transition: .5s;
+}
+
+.img {
+    margin: 0 auto;
+    height: 75vh;
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+    animation: opac 1.5s;
+}
+
+@keyframes opac {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.mouseEvent {
+    border: 4px solid salmon;
+    width: 300px;
+    position: absolute;
+    left: 20%;
+    transform: translate(-50%);
+}
+
+.themeContainer {
+    position: fixed;
+    top: 0;
+}
+
+.theme {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+#dark {
+    background: black;
+}
+
+#salmon {
+    background: salmon;
+}
+
+#yellow {
+    background: yellow;
+}
+
+.darkTheme {
+    background: black;
+    color: white;
+}
+
+.salmonTheme {
+    background: salmon;
+    color: black;
+}
+
+.yellowTheme {
+    background: yellow;
+    color: black;
+}

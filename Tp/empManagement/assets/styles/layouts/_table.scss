@@ -1,0 +1,22 @@
+.table-container {
+    .list {
+        margin: auto; //permet de centrer un tableau
+        width: 90%;
+        margin-top: 30px;
+        border-collapse: collapse;
+        thead {
+            height: 50px;
+            tr {
+                th {
+                    border: none;
+                    border-bottom: 1px solid $grey;
+                    border-right: 1px solid $grey;
+                    text-transform: capitalize;
+                    &:first-child {
+                        border-left: 1px solid $grey;
+                    }
+                }
+            }
+        }
+    }
+}

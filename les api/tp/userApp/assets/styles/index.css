@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@font-face {
+  font-family: "Quintessential";
+  src: url(../fonts/Quintessential/Quintessential-Regular.ttf);
+}
+@font-face {
+  font-family: "Tapestry";
+  src: url(../fonts/Tapestry/Tapestry-Regular.ttf);
+}
+@font-face {
+  font-family: "Sofia";
+  src: url(../fonts/Sofia/Sofia-Regular.ttf);
+}
+@font-face {
+  font-family: "font-1";
+  src: url(./font/Inter-VariableFont_slntwght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 90%;
+}
+body .card {
+  flex: 1 0 30%;
+  margin: 10px;
+  padding: 20px 20px 0;
+  text-align: center;
+  border-radius: 8px;
+  width: 350px;
+  background: #fff2e1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: 0 1px 6px rgba(51, 51, 51, 0.192);
+  position: relative;
+  min-height: 260px;
+  display: grid;
+  overflow: hidden;
+}
+body .card::before {
+  content: "";
+  height: 76px;
+  width: 100%;
+  position: absolute;
+  background: url(https://picsum.photos/600/100) center/cover;
+  filter: opacity(0.7) grayscale(80%);
+}
+body .card img {
+  border-radius: 150px;
+  margin: 4px auto 0;
+  height: 100px;
+  display: block;
+  box-shadow: 0 2px 6px rgba(51, 51, 51, 0.652);
+  z-index: 2;
+}
+body .card h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+body .card em,
+body .card p {
+  font-size: 0.9rem;
+}
+
+.navbar {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .logo img {
+  height: 30px;
+  width: 100px;
+}
+.navbar .menu .items {
+  display: flex;
+  justify-content: end;
+  padding-top: 7px;
+  transition: 8s ease-out;
+}
+.navbar .menu .items li {
+  margin-right: 10px;
+  list-style: none;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  position: relative;
+}
+.navbar .menu .items li:hover {
+  color: #3783F5;
+}
+.navbar .menu .items li:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.navbar .menu .items li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0px;
+  background: #33EAB9;
+  height: 3px;
+  transition-property: left, right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.navbar .toggle-btn {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .menu .items {
+    display: none;
+    justify-content: flex-start;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar .menu .items li {
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar .toggle-btn {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    right: 20px;
+  }
+  .navbar .toggle-btn span {
+    width: 30px;
+    height: 5px;
+    margin-top: 2px;
+    background: #3783F5;
+    border-radius: 10px;
+  }
+  .navbar.active {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar.active .menu {
+    transition: 0.3s;
+  }
+  .navbar.active .menu .items {
+    display: block;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .navbar.active .menu .items li {
+    transition: 0.3s ease-out;
+  }
+  .navbar.active .toggle-btn {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    right: 20px;
+  }
+  .navbar.active .toggle-btn span {
+    width: 20px;
+    height: 5px;
+    margin-top: 2px;
+    background: #3783F5;
+    border-radius: 10px;
+  }
+  .active span {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+  }
+  .active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .active span:nth-child(2) {
+    opacity: 0;
+  }
+  .active span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
+.content {
+  color: #09fbba;
+  transition: 1s;
+  background-color: #383838;
+  z-index: 1;
+}
+.content h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+}
+.content p {
+  padding: 10px 50px;
+}
+
+/*# sourceMappingURL=index.css.map */

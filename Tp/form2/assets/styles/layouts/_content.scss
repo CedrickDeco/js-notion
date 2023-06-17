@@ -1,0 +1,107 @@
+.content {
+    color: $nav-item-color;
+    transition: 1s;
+    height: 93vh;
+    overflow: hidden;
+    //background-color: #3838382c;
+    //background: url("/le JS/Tp/transparent_form/assets/img/bg1.jpg") no-repeat center/cover;
+    background: linear-gradient(to bottom, #3838382c, #3838382c), url("/le JS/Tp/transparent_form/assets/img/bg1.jpg") no-repeat center/contain;
+    //filter: brightness(60%); //ceci joue aussi le role de constraste
+    z-index: 1;
+    h1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 4rem;
+        //margin-top: 20px;
+    }
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0 10px;
+        .form-content {
+            &.show {
+                visibility: visible;
+                opacity: 1;
+            }
+            width: 460px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background: #00000050;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s,
+            opacity 0.3s;
+            .form-block {
+                margin: 20px 10px 0;
+                .form-header {
+                    display: flex;
+                    justify-content: center;
+                    margin: 10px 0 15px;
+                    font-size: 1.1rem;
+                    color: $nav-item-underline-color;
+                    box-shadow: 2px 3px 8px $box-shadow-color;
+                    border-radius: 50px;
+                    .btn {
+                        padding: 10px;
+                        flex: 50%;
+                        border: 1px solid transparent;
+                        border-radius: 50px;
+                        user-select: none; //ceci fait en sorte qu'on ne puisse pas selectionné le texte
+                        cursor: pointer;
+                        &.active {
+                            border-color: $nav-item-underline-color;
+                            box-shadow: inset 1px 1px 2px rgb(19 210 177 / 55%), inset -1px 1px 2px rgb(19 210 177 / 55%), inset -1px -1px 2px rgb(19 210 177 / 55%), inset 1px -1px 2px rgb(19 210 177 / 55%);
+                            transition: border-color 0.3s, box-shadow 0.3s;
+                        }
+                    }
+                }
+                .form-body {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    text-align: center;
+                    .form {
+                        flex: 0 0 100%;
+                        display: block;
+                        .form-input {
+                            width: 100%;
+                            outline: none;
+                            padding: 10px 0;
+                            border: none;
+                            border-bottom: 1px solid $nav-item-underline-color;
+                            background: transparent;
+                            &::placeholder {
+                                color: $nav-item-underline-color;
+                                font-style: italic;
+                            }
+                        }
+                        .form-button {
+                            margin: 30px 0;
+                            padding: 10px;
+                            background: $nav-item-underline-color;
+                            color: black;
+                            border: none;
+                            font-size: 1.1rem;
+                            text-transform: capitalize;
+                            border-radius: 50px;
+                            transition: transform 0.3s, box-shadow 0.3s;
+                            &:hover {
+                                transform: scale(1.05);
+                                box-shadow: 0px 0px 7px 4px $nav-item-underline-color;
+                            }
+                        }
+                        &.toggleForm {
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: visibility 0.3s, opacity 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    p {
+        padding: 10px 50px;
+    }
+}

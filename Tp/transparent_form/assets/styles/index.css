@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@font-face {
+  font-family: "Quintessential";
+  src: url(../fonts/Quintessential/Quintessential-Regular.ttf);
+}
+@font-face {
+  font-family: "Tapestry";
+  src: url(../fonts/Tapestry/Tapestry-Regular.ttf);
+}
+@font-face {
+  font-family: "Sofia";
+  src: url(../fonts/Sofia/Sofia-Regular.ttf);
+}
+@font-face {
+  font-family: "font-1";
+  src: url(./font/Inter-VariableFont_slntwght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .logo img {
+  height: 30px;
+  width: 100px;
+}
+.navbar .menu .items {
+  display: flex;
+  justify-content: end;
+  padding-top: 7px;
+}
+.navbar .menu .items li {
+  margin-right: 10px;
+  list-style: none;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  position: relative;
+}
+.navbar .menu .items li:hover {
+  color: #3783F5;
+}
+.navbar .menu .items li:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.navbar .menu .items li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0px;
+  background: #33EAB9;
+  height: 3px;
+  transition-property: left, right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.navbar .menu .items .connectBtn {
+  padding: 0 2px;
+  margin-top: -3px;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  transition: border-color 0.3s;
+}
+.navbar .menu .items .connectBtn:hover {
+  border: #33EAB9 1px solid;
+  margin-top: -3px;
+}
+.navbar .toggle-btn {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .menu .items {
+    display: none;
+    justify-content: flex-start;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar .menu .items li {
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar .toggle-btn {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    right: 20px;
+  }
+  .navbar .toggle-btn span {
+    width: 30px;
+    height: 5px;
+    margin-top: 2px;
+    background: #3783F5;
+    border-radius: 10px;
+  }
+  .navbar.active {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar.active .menu {
+    transition: 0.3s;
+  }
+  .navbar.active .menu .items {
+    display: block;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .navbar.active .menu .items li {
+    transition: 0.3s ease-out;
+  }
+  .navbar.active .toggle-btn {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    right: 20px;
+  }
+  .navbar.active .toggle-btn span {
+    width: 20px;
+    height: 5px;
+    margin-top: 2px;
+    background: #3783F5;
+    border-radius: 10px;
+  }
+  .active span {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+  }
+  .active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .active span:nth-child(2) {
+    opacity: 0;
+  }
+  .active span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
+.content {
+  color: #3783F5;
+  transition: 1s;
+  height: 93vh;
+  background: linear-gradient(to bottom, rgba(56, 56, 56, 0.1725490196), rgba(56, 56, 56, 0.1725490196)), url("/le JS/Tp/transparent_form/assets/img/bg1.jpg") no-repeat center/cover;
+  z-index: 1;
+}
+.content h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+}
+.content section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+.content section .form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+}
+.content section .form-wrapper .card {
+  width: 360px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.35);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+.content section .form-wrapper .card.show {
+  visibility: visible;
+  opacity: 1;
+}
+.content section .form-wrapper .card .card-header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px 20px 0;
+  font-size: 1.1rem;
+  color: #33EAB9;
+  box-shadow: 2px 3px 8px rgba(211, 247, 255, 0.4431372549);
+  border-radius: 50px;
+}
+.content section .form-wrapper .card .card-header .form-header {
+  flex: 50%;
+  text-align: center;
+  padding: 10px 0;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  user-select: none;
+  cursor: pointer;
+}
+.content section .form-wrapper .card .card-header .form-header.active {
+  border-color: #33EAB9;
+  box-shadow: inset 1px 1px 2px rgba(19, 210, 177, 0.55), inset -1px 1px 2px rgba(19, 210, 177, 0.55), inset -1px -1px 2px rgba(19, 210, 177, 0.55), inset 1px -1px 2px rgba(19, 210, 177, 0.55);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.content section .form-wrapper .card .card-body {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 40px 0;
+  text-align: center;
+}
+.content section .form-wrapper .card .card-body form {
+  flex: 0 0 100%;
+  display: block;
+}
+.content section .form-wrapper .card .card-body form .form-control {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #33EAB9;
+  background: transparent;
+  outline: none;
+  padding: 10px 0px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.content section .form-wrapper .card .card-body form .form-control::placeholder {
+  color: #33EAB9;
+}
+.content section .form-wrapper .card .card-body form .formButton {
+  padding: 16px 25px;
+  border-radius: 50px;
+  background: #33EAB9;
+  border: 1px solid transparent;
+  margin-top: 1rem;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+.content section .form-wrapper .card .card-body form .formButton:hover {
+  box-shadow: 3px 5px 15px #33EAB9;
+  transform: scale(1.2);
+}
+.content section .form-wrapper .card .card-body form.toggleForm {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.content p {
+  padding: 10px 50px;
+}
+
+/*# sourceMappingURL=index.css.map */

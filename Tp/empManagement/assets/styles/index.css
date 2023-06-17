@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@font-face {
+  font-family: "Quintessential";
+  src: url(../fonts/Quintessential/Quintessential-Regular.ttf);
+}
+@font-face {
+  font-family: "Tapestry";
+  src: url(../fonts/Tapestry/Tapestry-Regular.ttf);
+}
+@font-face {
+  font-family: "Sofia";
+  src: url(../fonts/Sofia/Sofia-Regular.ttf);
+}
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  outline: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+body .btn {
+  margin-right: 20px;
+  padding: 10px;
+  background: #26a9e9;
+  border: none;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.03rem;
+  border-radius: 20px;
+  font-family: "Inter", sans-serif, cursive;
+  cursor: pointer;
+  transition: 0.3s;
+}
+body .btn:hover {
+  transform: scale(1.02);
+}
+body tr td {
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+}
+body tr td:first-child {
+  border-left: 1px solid #f0f0f0;
+}
+body tr td:last-child {
+  text-align: center;
+  padding-left: 0px;
+}
+body tr td:last-child button {
+  padding: 5px 10px;
+  margin: 5px 0;
+  background: #26a9e9;
+  border: none;
+  color: #fff;
+  font-size: 1.03rem;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif, cursive;
+  cursor: pointer;
+  transition: 0.3s;
+}
+body tr td:last-child button:last-child {
+  background: #f8614b;
+}
+body .btn-table:hover {
+  transform: scale(1.02);
+}
+
+.entete {
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.entete .left {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+.entete .right {
+  display: flex;
+  justify-content: flex-start;
+}
+.entete .right .search-icon {
+  color: #26a9e9;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.entete .right input {
+  width: 60rem;
+  border: none;
+  border-bottom: 2px #26a9e9 solid;
+  outline: none;
+  height: 15px;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+.entete .right input::placeholder {
+  color: #aeaeac;
+  font-family: "roboto", sans-serif, cursive;
+  font-size: 1.05rem;
+  padding-bottom: -100px;
+}
+.entete .right button.btn {
+  background: #f8614b;
+}
+
+@media screen and (max-width: 770px) {
+  .entete {
+    display: block;
+    align-items: center;
+    width: 100%;
+  }
+  .entete .left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .entete .right {
+    display: flex;
+    justify-content: center;
+  }
+  .entete .right .search-icon {
+    color: #26a9e9;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+  .entete .right input {
+    width: 25rem;
+    border: none;
+    border-bottom: 2px #26a9e9 solid;
+    outline: none;
+    height: 15px;
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+  .entete .right input::placeholder {
+    color: #aeaeac;
+    font-family: "roboto", sans-serif, cursive;
+    font-size: 1.05rem;
+    padding-bottom: -100px;
+    text-transform: capitalize;
+  }
+  .entete .right button.btn {
+    background: #f8614b;
+  }
+}
+@media screen and (max-width: 404px) {
+  .entete {
+    width: 100%;
+    display: block;
+    align-items: center;
+  }
+  .entete .left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .entete .left .btn:last-child {
+    margin-top: 10px;
+  }
+  .entete .right {
+    display: flex;
+    justify-content: center;
+  }
+  .entete .right .search-icon {
+    color: #26a9e9;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  .entete .right input {
+    width: 25rem;
+    border: none;
+    border-bottom: 2px #26a9e9 solid;
+    outline: none;
+    height: 15px;
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+  .entete .right input::placeholder {
+    color: #aeaeac;
+    font-family: "roboto", sans-serif, cursive;
+    font-size: 1.05rem;
+    padding-bottom: -100px;
+    text-transform: capitalize;
+  }
+  .entete .right button.btn {
+    background: #f8614b;
+    margin-top: 10px;
+  }
+}
+.header {
+  background: #f8614b;
+  width: 100%;
+}
+.header .title {
+  padding-left: 20px;
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: "Kanit", sans-serif, cursive;
+}
+
+@media screen and (max-width: 370px) {
+  .header {
+    width: 100vw;
+  }
+}
+.table-container .list {
+  margin: auto;
+  width: 90%;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+.table-container .list thead {
+  height: 50px;
+}
+.table-container .list thead tr th {
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+  text-transform: capitalize;
+}
+.table-container .list thead tr th:first-child {
+  border-left: 1px solid #f0f0f0;
+}
+
+.create-modal-container {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5019607843);
+  position: absolute;
+  top: 0;
+  overflow: auto;
+  margin: 0 auto;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  z-index: -1;
+}
+.create-modal-container .create-modal {
+  width: 0%;
+  top: -50%;
+  left: -50%;
+  transform: translate(50%, 50%);
+  background: #fff;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+.create-modal-container .create-modal .hr1 {
+  background: #255aa1;
+  height: 8px;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.create-modal-container .create-modal .hr2 {
+  background: #26a9e9;
+  height: 7px;
+  width: 100%;
+  margin-top: -1px;
+}
+.create-modal-container .create-modal .close-btn {
+  height: 25px;
+  width: 25px;
+  background: #f8614b;
+  border-radius: 50%;
+  margin-left: 98%;
+  margin-top: -25px;
+  cursor: pointer;
+  position: relative;
+}
+.create-modal-container .create-modal .close-btn i {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  color: #fff;
+}
+.create-modal-container .create-modal .form-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  background: #f0f0f0;
+}
+.create-modal-container .create-modal .form-container .left-part {
+  border-right: 4px solid #26a9e9;
+}
+.create-modal-container .create-modal .form-container .left-part .image-container {
+  display: grid;
+  grid-template-columns: 70% 40%;
+  margin-top: 10px;
+}
+@media screen and (max-width: 800px) {
+  .create-modal-container .create-modal .form-container .left-part .image-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.create-modal-container .create-modal .form-container .left-part .image-container .image img {
+  height: 90%;
+  width: 90%;
+  margin-left: 10%;
+  border-radius: 10px;
+}
+@media screen and (max-width: 800px) {
+  .create-modal-container .create-modal .form-container .left-part .image-container .image img {
+    margin-left: 20%;
+    height: 60%;
+    width: 60%;
+  }
+}
+.create-modal-container .create-modal .form-container .left-part .image-container .icone i {
+  margin-left: 10%;
+  margin-top: 80%;
+  color: #26a9e9;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 800px) {
+  .create-modal-container .create-modal .form-container .left-part .image-container .icone i {
+    margin-left: 45%;
+    margin-top: 10%;
+  }
+}
+.create-modal-container .create-modal .form-container .left-part .image-container .icone input {
+  position: absolute;
+  border-radius: 50px;
+  width: 25px;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer;
+}
+@media screen and (min-width: 900px) {
+  .create-modal-container .create-modal .form-container .left-part .image-container .icone input {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 899px) {
+  .create-modal-container .create-modal .form-container .left-part .image-container .icone input {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 800px) {
+  .create-modal-container .create-modal .form-container .left-part .image-container .icone input {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.create-modal-container .create-modal .form-container .right-part form {
+  margin: 10px 15px;
+}
+.create-modal-container .create-modal .form-container .right-part form .container {
+  display: block;
+}
+.create-modal-container .create-modal .form-container .right-part form .container .first {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 800px) {
+  .create-modal-container .create-modal .form-container .right-part form .container .first {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.create-modal-container .create-modal .form-container .right-part form .container .first .left label {
+  color: #000;
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: "roboto", sans-serif, cursive;
+}
+.create-modal-container .create-modal .form-container .right-part form .container .first .right input {
+  width: 93%;
+  border: none;
+  border-bottom: 1px solid #7bb5cd;
+  outline: none;
+  background: transparent;
+}
+.create-modal-container .create-modal .form-container .right-part form .container .second .errEmail {
+  display: none;
+}
+.create-modal-container .create-modal .form-container .right-part form .boutons {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+@media screen and (max-width: 800px) {
+  .create-modal-container .create-modal .form-container .right-part form .boutons {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.create-modal-container .create-modal .form-container .right-part form .boutons .addBtn {
+  justify-self: center;
+  padding: 10px;
+  background: #26a9e9;
+  border: none;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1rem;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif, cursive;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.create-modal-container .create-modal .form-container .right-part form .boutons .addBtn:disabled {
+  background: #6f8096;
+}
+.create-modal-container .create-modal .form-container .right-part form .boutons .addBtn:hover {
+  transform: scale(1.02);
+}
+.create-modal-container .create-modal .form-container .right-part form .boutons .addBtn:first-child {
+  background: #26a9e9;
+}
+@media screen and (max-width: 800px) {
+  .create-modal-container .create-modal .form-container .right-part form .boutons .addBtn:first-child {
+    margin-bottom: 10px;
+  }
+}
+.create-modal-container .create-modal .form-container .right-part form .boutons .addBtn:first-child:disabled {
+  background: #6f8096;
+}
+@media screen and (max-width: 800px) {
+  .create-modal-container .create-modal .form-container .right-part form .boutons .addBtn:first-child:disabled {
+    margin-bottom: 10px;
+  }
+}
+.create-modal-container .create-modal .form-container .right-part form .boutons .addBtn:last-child {
+  background: #26a9e9;
+}
+.create-modal-container .create-modal .form-container .right-part form .boutons .addBtn:last-child:disabled {
+  background: #6f8096;
+}
+
+.create-modal-container.active {
+  opacity: 1;
+  z-index: 1;
+}
+.create-modal-container.active .create-modal {
+  width: 50%;
+}
+
+/*# sourceMappingURL=index.css.map */

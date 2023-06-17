@@ -1,0 +1,109 @@
+.content {
+    color: $nav-item-color;
+    transition: 1s;
+    height: 93vh;
+    //overflow: hidden;
+    // background-color: #3838382c;
+    // background: url("/le JS/Tp/transparent_form/assets/img/bg1.jpg") no-repeat center/cover;
+    background: linear-gradient(to bottom, #3838382c, #3838382c), url("/le JS/Tp/transparent_form/assets/img/bg1.jpg") no-repeat center/cover;
+    //filter: brightness(90%); //ceci joue aussi le role de constraste
+    z-index: 1;
+    h1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 4rem;
+        //margin-top: 20px;
+    }
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+        .form-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: auto;
+            .card {
+                width: 360px;
+                padding: 20px;
+                background: rgb(0 0 0 /35%);
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 0.3s, opacity 0.3s;
+                &.show {
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .card-header {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin: 30px 20px 0;
+                    font-size: 1.1rem;
+                    color: $nav-item-underline-color;
+                    box-shadow: 2px 3px 8px $box-shadow-color;
+                    border-radius: 50px;
+                    .form-header {
+                        flex: 50%;
+                        text-align: center;
+                        padding: 10px 0;
+                        border: 1px solid transparent;
+                        border-radius: 50px;
+                        user-select: none; //ceci fait en sorte qu'on ne puisse pas selectionné le texte
+                        cursor: pointer;
+                        &.active {
+                            border-color: $nav-item-underline-color;
+                            box-shadow: inset 1px 1px 2px rgb(19 210 177 / 55%), inset -1px 1px 2px rgb(19 210 177 / 55%), inset -1px -1px 2px rgb(19 210 177 / 55%), inset 1px -1px 2px rgb(19 210 177 / 55%);
+                            transition: border-color 0.3s, box-shadow 0.3s;
+                        }
+                    }
+                }
+                .card-body {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    padding: 40px 0;
+                    text-align: center;
+                    form {
+                        flex: 0 0 100%;
+                        display: block;
+                        .form-control {
+                            width: 100%;
+                            border: none;
+                            border-bottom: 1px solid $nav-item-underline-color;
+                            background: transparent;
+                            outline: none;
+                            padding: 10px 0px;
+                            margin-bottom: 20px;
+                            color: $white;
+                            &::placeholder {
+                                color: $nav-item-underline-color;
+                            }
+                        }
+                        .formButton {
+                            padding: 16px 25px;
+                            border-radius: 50px;
+                            background: $nav-item-underline-color;
+                            border: 1px solid transparent;
+                            margin-top: 1rem;
+                            font-size: 1rem;
+                            transition: transform 0.2s, box-shadow 0.3s;
+                            &:hover {
+                                box-shadow: 3px 5px 15px $nav-item-underline-color;
+                                transform: scale(1.2);
+                            }
+                        }
+                        &.toggleForm {
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: opacity 0.3s, visibility 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    p {
+        padding: 10px 50px;
+    }
+}

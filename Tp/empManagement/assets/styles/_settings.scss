@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "Quintessential";
+    src: url(../fonts/Quintessential/Quintessential-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Tapestry";
+    src: url(../fonts/Tapestry/Tapestry-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Sofia";
+    src: url(../fonts/Sofia/Sofia-Regular.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$menu: "roboto",
+sans-serif,
+cursive;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+$kanit: "Kanit",
+sans-serif,
+cursive;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+$inter: "Inter",
+sans-serif,
+cursive;
+//color
+$pink-color: #f8614b;
+$simple-bleu: #26a9e9;
+$dark-bleu: #255aa1;
+$dark-grey:#718096;
+$placholder-color: #aeaeac;
+$grey:#f0f0f0;
+$line-color: #7bb5cd;
+$black: #000;
+$white: #fff;
+$modalContainerBg: #00000080;
+$grey-btn: #6f8096;
+* {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+}
+
+body {
+    //background: url(../img/bg.jpg) center/cover;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    .btn {
+        margin-right: 20px;
+        padding: 10px;
+        background: $simple-bleu;
+        border: none;
+        color: $white;
+        text-transform: capitalize;
+        font-size: 1.03rem;
+        border-radius: 20px;
+        font-family: $inter;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+    tr {
+        td {
+            text-align: center;
+            border-bottom: 1px solid $grey;
+            border-right: 1px solid $grey;
+            &:first-child {
+                border-left: 1px solid $grey;
+            }
+            &:last-child {
+                text-align: center;
+                padding-left: 0px;
+                button {
+                    padding: 5px 10px;
+                    margin: 5px 0;
+                    background: $simple-bleu;
+                    border: none;
+                    color: $white;
+                    font-size: 1.03rem;
+                    border-radius: 10px;
+                    font-family: $inter;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    &:last-child {
+                        background: $pink-color;
+                        //margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .btn-table {
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
